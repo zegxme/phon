@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบหลังบ้านสำหรับเจ้าหน้าที่</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <img src="https://img2.pic.in.th/pic/463811936_516171681230833_4407042447884408044_n.jpg" alt="supachet" style="width: 50px; height: 50px;">
+    <h1>ระบบหลังบ้านสำหรับเจ้าหน้าที่</h1>
+</header>
+
+
+    <main>
+        <section id="loginSection">
+            <h2>กรอกรหัสผ่าน</h2>
+            <input type="password" id="adminPassword" placeholder="กรอกรหัสผ่าน" required>
+            <button onclick="adminLogin()">เข้าสู่ระบบ</button>
+        </section>
+
+        <section id="adminSection" style="display: none;">
+            <h2>เพิ่มผู้ผ่อน</h2>
+            <form id="addBorrowerForm">
+                <label for="borrowerName">ชื่อผู้ผ่อน:</label>
+                <input type="text" id="borrowerName" required>
+
+                <label for="paymentDate">วันที่ส่งยอดผ่อน:</label>
+                <input type="date" id="paymentDate" required>
+
+                <label for="paymentAmount">จำนวนเงิน:</label>
+                <input type="number" id="paymentAmount" required>
+
+                <label for="remainingAmount">ยอดคงเหลือ:</label>
+                <input type="number" id="remainingAmount" required>
+
+                <button type="submit">เพิ่มผู้ผ่อน</button>
+            </form>
+            <div id="borrowerList"></div>
+        </section>
+
+        <section>
+            <h2>ประวัติการผ่อนของผู้ผ่อน</h2>
+            <div id="borrowerHistory"></div>
+            <h3>เคลียร์ข้อมูลผู้ผ่อน</h3>
+            <select id="borrowerSelect"></select>
+            <button onclick="clearSelectedBorrower()" id="clearButton" disabled>เคลียร์ข้อมูล</button>
+            <button onclick="goToSearchPage()">กลับไปที่หน้าค้นหาผู้ผ่อน</button>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

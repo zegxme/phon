@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบผ่อนสินค้า</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ระบบผ่อนสินค้า</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>ค้นหาผู้ผ่อน</h2>
+            <input type="text" id="searchBorrower" placeholder="กรอกชื่อผู้ผ่อน">
+            <button onclick="searchBorrower()">ค้นหา</button>
+        </section>
+        
+        <section id="borrowerInfo" style="display: none;">
+            <h2>ข้อมูลผู้ผ่อน</h2>
+            <div id="borrowerDetails"></div>
+            <div id="paymentHistory" style="display: none;">
+                <h2>ประวัติการผ่อนของผู้ผ่อน</h2>
+                <div id="paymentDetails"></div>
+            </div>
+            <button onclick="goBackToSearch()">ค้นหาอีกครั้ง</button>
+        </section>
+        
+        <section>
+            <h2>เข้าถึงระบบหลังบ้าน</h2>
+            <button onclick="goToAdmin()">หลังบ้านสำหรับเจ้าหน้าที่</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
