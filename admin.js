@@ -3,7 +3,7 @@ let borrowers = JSON.parse(localStorage.getItem("borrowers")) || [];
 // ฟังก์ชันสำหรับเข้าสู่ระบบ
 function adminLogin() {
     const password = document.getElementById("adminPassword").value;
-    if (password === "1111") {
+    if (password === "1212") {
         alert("เข้าสู่ระบบสำเร็จ!");
         document.getElementById("loginSection").style.display = "none"; // ซ่อนฟอร์มรหัสผ่าน
         document.getElementById("adminSection").style.display = "block"; // แสดงระบบหลังบ้าน
